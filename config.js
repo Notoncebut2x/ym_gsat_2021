@@ -45,6 +45,10 @@ var config = {
                 {
                     layer: 'brazil-historic-buildings',
                     opacity: 0
+                },
+                                {
+                    layer: 'uganda-wpdx',
+                    opacity: .85
                 }
             ],
             onChapterExit: [
@@ -209,6 +213,31 @@ var config = {
             onChapterExit: [
                 {
                     layer: 'ym-tz-omdtz',
+                    opacity: 0.0
+                }
+            ]
+        }, 
+        {
+            id: 'chapter-updates-uganda',
+            alignment: 'left',
+            title: 'Mapping Waterpoints in Uganda',
+            //image: './imgs/chapters_by_regions.png',
+            description: 'The Bureau for Resilience and Food Security has allocated innovation funds for the YouthMappers program to survey waterpoints in Gulu, Uganda to validate their location, operational status along with other critical attributes.  This data will be used to update the Waterpoint Data Exchange\'s datasets and used to engage local water authorities to assist in the management of their water point infrastructure.  Additionally researchers will use the datasets to develop Machine learning algorithms to better local water points features in the country.',
+            location: {
+                center: [32.28, 3.021],
+                zoom: 10,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+           onChapterEnter: [
+                {
+                    layer: 'uganda-wpdx',
+                    opacity: .85
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'uganda-wpdx',
                     opacity: 0.0
                 }
             ]
