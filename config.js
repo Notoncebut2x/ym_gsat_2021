@@ -17,7 +17,7 @@ var config = {
             description: 'YouthMappers is a consortium of student-led mapping chapters at universities around the world. YouthMappers organizes, collaborates, and implements mapping activities that respond to development and humanitarian assistance needs around the globe – creating and using spatial data and information that is made publicly available through open platforms like OpenStreetMap.',
             location: {
                 center: [-88, 33],
-                zoom: 2,
+                zoom:  2,
                 pitch: 0.00,
                 bearing: 0.00
             },
@@ -123,7 +123,7 @@ var config = {
             description: '2021 saw the addition of six chapters in new countries for the network (Angola, Madagascar, Mauritania, Paraguay, Swaziland, Togo).',
             location: {
                 center: [-88, 33],
-                zoom: 2,
+                zoom: 3,
                 pitch: 0.00,
                 bearing: 0.00
             },
@@ -157,18 +157,28 @@ var config = {
         },
         {
             id: '2021-osm-activities',
-            alignment: 'center',
+            alignment: 'left',
             title: 'Unique edits to OpenStreetMap',
            // image: './imgs/chapters_by_regions.png',
             description: 'YouthMappers students have surpassed 12 million edits to OpenStreetMap (OSM) this year.  That means new buildings, roads, and points of interest have been added that were otherwise unmapped.',
             location: {
-                center: [-88, 33],
-                zoom: 2,
+                center: [1, 30],
+                zoom: 3,
                 pitch: 0.00,
                 bearing: 0.00
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                 {
+                     layer: 'ym-all-changesets-z8-1',
+                     opacity: .85
+                 }
+                    ],
+            onChapterExit: [
+                 {
+                     layer: 'ym-all-changesets-z8-1',
+                     opacity: 0
+                 }
+            ]
         },
         {
             id: 'ESM-Update',
