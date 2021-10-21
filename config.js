@@ -3,7 +3,7 @@ var config = {
     accessToken: 'pk.eyJ1Ijoicm9yeW5lYWxvbiIsImEiOiJQSkZ2NU9nIn0.8i2jsHIQQBU4lDdv3emAbQ',
     showMarkers: false,
     theme: 'ym',
-    use3dTerrain: true,
+    use3dTerrain: false,
     title: 'GSAT 2021: YouthMappers Update',
     subtitle: 'Checking in on the YouthMappers Project',
     byline: '',
@@ -57,12 +57,24 @@ var config = {
                 {
                     layer: 'uganda-wpdx copy 1',
                     opacity: 0          
+                },
+                {
+                    layer: 'ym-all-changesets-z8-1',
+                    opacity: 0
+                },
+                {
+                    layer: 'ym-all-changesets-z8-2',
+                    opacity: 0
+                },
+                {
+                    layer: 'ym-all-changesets-z8-3',
+                    opacity: 0
                 }
             ],
             onChapterExit: [
                 {
                     layer: 'ym-chapters-hot',
-                    opacity: 0.15
+                    opacity: 0
                 }
            ]
         },
@@ -70,7 +82,7 @@ var config = {
             id: 'founding_Schools',
             alignment: 'left',
             title: 'Founded',
-            image: '',
+            //image: '',
             description: 'YouthMappers is managed via a cooperative agreement between the USAID GeoCenter and a consortium of U.S. universities, which serve as the implementing partners.  The program was launched 5 years ago.',
             location: {
                 center: [-98, 40],
@@ -88,10 +100,6 @@ var config = {
                 {
                     layer: 'founding-universities',
                     opacity: 0.0
-                },
-                {
-                    layer: 'ym-chapters-hot',
-                    opacity: 0.0
                 }
             ]
         },
@@ -108,12 +116,7 @@ var config = {
                 bearing: 0.00
             },
             onChapterEnter: [],
-            onChapterExit: [
-                {
-                    layer: 'ym-chapters-hot',
-                    opacity: 0.0
-                }
-            ]
+            onChapterExit: []
         },
         {
             id: 'chapters_by_country',
@@ -123,7 +126,7 @@ var config = {
             description: '2021 saw the addition of six chapters in new countries for the network (Angola, Madagascar, Mauritania, Paraguay, Swaziland, Togo).',
             location: {
                 center: [-88, 33],
-                zoom: 3,
+                zoom: 2,
                 pitch: 0.00,
                 bearing: 0.00
             },
@@ -170,12 +173,28 @@ var config = {
             onChapterEnter: [
                  {
                      layer: 'ym-all-changesets-z8-1',
-                     opacity: .85
+                     opacity: 0.85
+                 },
+                 {
+                     layer: 'ym-all-changesets-z8-2',
+                     opacity: 0.85
+                 },
+                 {
+                     layer: 'ym-all-changesets-z8-3',
+                     opacity: 0.85
                  }
-                    ],
+            ],
             onChapterExit: [
                  {
                      layer: 'ym-all-changesets-z8-1',
+                     opacity: 0
+                 },
+                 {
+                     layer: 'ym-all-changesets-z8-2',
+                     opacity: 0
+                 },
+                 {
+                     layer: 'ym-all-changesets-z8-3',
                      opacity: 0
                  }
             ]
@@ -250,13 +269,29 @@ var config = {
            onChapterEnter: [
                 {
                     layer: 'uganda-wpdx',
-                    opacity: .85
+                    opacity: 0.85
+                },
+                {
+                    layer: 'uganda-wpdx copy',
+                    opacity: 0.85          
+                },
+                {
+                    layer: 'uganda-wpdx copy 1',
+                    opacity: 0.85         
                 }
             ],
             onChapterExit: [
                 {
                     layer: 'uganda-wpdx',
-                    opacity: 0.0
+                    opacity: 0
+                },
+                {
+                    layer: 'uganda-wpdx copy',
+                    opacity: 0          
+                },
+                {
+                    layer: 'uganda-wpdx copy 1',
+                    opacity: 0       
                 }
             ]
         },
